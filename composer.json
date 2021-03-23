@@ -1,5 +1,5 @@
 {
-    "name": "bshaffer/oauth2-server-php",
+    "name": "lexspeedkb/oauth2-server-php",
     "description":"OAuth2 Server for PHP",
     "keywords":["oauth","oauth2","auth"],
     "type":"library",
@@ -9,9 +9,13 @@
             "name":"Brent Shaffer",
             "email": "bshafs@gmail.com",
             "homepage":"http://brentertainment.com"
+        },
+        {
+            "name":"Alex Pilipenko",
+            "email": "lexspeedkb@gmail.com"
         }
     ],
-    "homepage": "http://github.com/bshaffer/oauth2-server-php",
+    "homepage": "http://github.com/lexspeedkb/oauth2-server-php",
     "autoload": {
         "psr-0": { "OAuth2": "src/" }
     },

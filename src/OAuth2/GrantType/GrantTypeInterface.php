@@ -23,7 +23,7 @@ interface GrantTypeInterface
      * @param ResponseInterface $response
      * @return mixed
      */
-    public function validateRequest(RequestInterface $request, ResponseInterface $response);
+    public function validateRequest(RequestInterface $request, ResponseInterface $response, $auth_type);
 
     /**
      * Get client id

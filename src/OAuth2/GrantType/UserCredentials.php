@@ -46,15 +46,15 @@ class UserCredentials implements GrantTypeInterface
      *
      * @throws LogicException
      */
-    public function validateRequest(RequestInterface $request, ResponseInterface $response)
+    public function validateRequest(RequestInterface $request, ResponseInterface $response, $auth_type)
     {
         if (!$request->request("password") || !$request->request("username")) {
-            $response->setError(400, 'invalid_request', 'Missing parameters: "username" and "password" required');
-
-            return null;
+//            $response->setError(400, 'invalid_request', 'Missing parameters: "username" and "password" required');
+//
+//            return null;
         }
 
-        if (!$this->storage->checkUserCredentials($request->request("username"), $request->request("password"))) {
+        if (!$this->storage->checkUserCredentials($request->request("username"), $request->request("password"), $auth_type)) {
             $response->setError(401, 'invalid_grant', 'Invalid username and password combination');
 
             return null;

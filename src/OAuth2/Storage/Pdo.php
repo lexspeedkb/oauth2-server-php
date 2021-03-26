@@ -308,10 +308,14 @@ class Pdo implements
      * @param string $password
      * @return bool
      */
-    public function checkUserCredentials($username, $password)
+    public function checkUserCredentials($username, $password, $auth_type)
     {
         if ($user = $this->getUser($username)) {
-            return $this->checkPassword($user, $password);
+            if ($auth_type == 1) {
+                return true;
+            } else {
+                return $this->checkPassword($user, $password);
+            }
         }
 
         return false;

@@ -69,7 +69,7 @@ class RefreshToken implements GrantTypeInterface
      * @param ResponseInterface $response
      * @return bool|mixed|null
      */
-    public function validateRequest(RequestInterface $request, ResponseInterface $response)
+    public function validateRequest(RequestInterface $request, ResponseInterface $response, $auth_type)
     {
         if (!$request->request("refresh_token")) {
             $response->setError(400, 'invalid_request', 'Missing parameter: "refresh_token" is required');
